@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import fs from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -8,22 +9,65 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Try different paths for public directory
+let publicPath;
+const possiblePaths = [
+  path.join(__dirname, '../public'),
+  path.join(process.cwd(), 'public'),
+  './public',
+  'public'
+];
+
+for (const testPath of possiblePaths) {
+  if (fs.existsSync(testPath)) {
+    publicPath = testPath;
+    console.log(`Found public directory at: ${publicPath}`);
+    break;
+  }
+}
+
+if (!publicPath) {
+  console.log('Public directory not found, trying default path');
+  publicPath = path.join(__dirname, '../public');
+}
+
 // Serve static files from public directory
-app.use(express.static(path.join(__dirname, '../public')));
+app.use(express.static(publicPath));
+
+// Add logging middleware
+app.use((req, res, next) => {
+  console.log(`${new Date().toISOString()} - ${req.method} ${req.path}`);
+  next();
+});
 
 // Route for style guide
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/style-guide.html'));
+  try {
+    res.sendFile(path.join(publicPath, 'style-guide.html'));
+  } catch (err) {
+    console.error('Error serving style-guide.html:', err);
+    res.status(404).send('Style guide not found');
+  }
 });
 
 // Route for Vista RX MD style guide
 app.get('/vista', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/style-guide.html'));
+  try {
+    res.sendFile(path.join(publicPath, 'style-guide.html'));
+  } catch (err) {
+    console.error('Error serving style-guide.html:', err);
+    res.status(404).send('Vista style guide not found');
+  }
 });
 
 // Route for peptides style guide  
 app.get('/peptides', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/peptides-brand-guide.html'));
+  try {
+    res.sendFile(path.join(publicPath, 'peptides-brand-guide.html'));
+  } catch (err) {
+    console.error('Error serving peptides-brand-guide.html:', err);
+    res.status(404).send('Peptides style guide not found');
+  }
 });
 
 // Route for both guides in one page
