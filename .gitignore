@@ -50,7 +50,7 @@ lerna-debug.log*
 
 # Gatsby files
 .cache/
-public
+# public (commented out - we need public directory for style guides)
 
 # Vuepress build output
 .vuepress/dist

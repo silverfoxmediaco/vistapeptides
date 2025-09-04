@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/vistamdlogo40.png" />
+    <title>Vista RX MD - Style & Branding Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Primary Colors - Based on Logo */
+            --primary-blue: #4DACF2;
+            --primary-dark: #1A1A1A;
+            
+            /* Extended Color Palette */
+            --blue-50: #EBF7FF;
+            --blue-100: #D7EFFF;
+            --blue-200: #AFE0FE;
+            --blue-300: #87D0FD;
+            --blue-400: #5FC1FC;
+            --blue-500: #4DACF2;
+            --blue-600: #2A9AE8;
+            --blue-700: #1E7BBF;
+            --blue-800: #155C91;
+            --blue-900: #0D3D62;
+            
+            /* Neutral Colors */
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-400: #9CA3AF;
+            --gray-500: #6B7280;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --gray-800: #1F2937;
+            --gray-900: #111827;
+            
+            /* Semantic Colors */
+            --success: #10B981;
+            --warning: #F59E0B;
+            --error: #EF4444;
+            --info: var(--primary-blue);
+            
+            /* Typography Scale - Perfect Fourth (1.333) */
+            --text-xs: 0.75rem;     /* 12px */
+            --text-sm: 0.875rem;    /* 14px */
+            --text-base: 1rem;      /* 16px */
+            --text-lg: 1.125rem;    /* 18px */
+            --text-xl: 1.333rem;    /* 21px */
+            --text-2xl: 1.777rem;   /* 28px */
+            --text-3xl: 2.369rem;   /* 38px */
+            --text-4xl: 3.157rem;   /* 50px */
+            --text-5xl: 4.209rem;   /* 67px */
+            
+            /* Line Heights */
+            --leading-tight: 1.25;
+            --leading-snug: 1.375;
+            --leading-normal: 1.5;
+            --leading-relaxed: 1.625;
+            --leading-loose: 1.75;
+            
+            /* Font Weights */
+            --font-light: 300;
+            --font-normal: 400;
+            --font-medium: 500;
+            --font-semibold: 600;
+            --font-bold: 700;
+            --font-extrabold: 800;
+            
+            /* Spacing Scale - 8px Base Unit */
+            --space-0: 0;
+            --space-1: 0.25rem;    /* 4px */
+            --space-2: 0.5rem;     /* 8px */
+            --space-3: 0.75rem;    /* 12px */
+            --space-4: 1rem;       /* 16px */
+            --space-5: 1.25rem;    /* 20px */
+            --space-6: 1.5rem;     /* 24px */
+            --space-8: 2rem;       /* 32px */
+            --space-10: 2.5rem;    /* 40px */
+            --space-12: 3rem;      /* 48px */
+            --space-16: 4rem;      /* 64px */
+            --space-20: 5rem;      /* 80px */
+            --space-24: 6rem;      /* 96px */
+            
+            /* Screen Edge Margins */
+            --margin-mobile: var(--space-4);    /* 16px */
+            --margin-tablet: var(--space-6);    /* 24px */
+            --margin-desktop: var(--space-8);   /* 32px */
+            --margin-wide: var(--space-12);     /* 48px */
+            
+            /* Card Properties */
+            --card-padding: var(--space-6);     /* 24px */
+            --card-gap: var(--space-4);         /* 16px */
+            --card-radius: 12px;
+            --card-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --card-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --card-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --card-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            
+            /* Breakpoints */
+            --breakpoint-sm: 640px;
+            --breakpoint-md: 768px;
+            --breakpoint-lg: 1024px;
+            --breakpoint-xl: 1280px;
+            --breakpoint-2xl: 1536px;
+            
+            /* Max Widths */
+            --max-width-sm: 640px;
+            --max-width-md: 768px;
+            --max-width-lg: 1024px;
+            --max-width-xl: 1280px;
+            --max-width-2xl: 1536px;
+            --max-width-full: 100%;
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --radius-2xl: 24px;
+            --radius-full: 9999px;
+            
+            /* Transitions */
+            --transition-fast: 150ms ease;
+            --transition-base: 250ms ease;
+            --transition-slow: 350ms ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #ffffff;
+            color: var(--primary-dark);
+            line-height: var(--leading-normal);
+            font-size: var(--text-base);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+        
+        /* Background Textures and Patterns */
+        .texture-dots {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .texture-dots::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 1px 1px, rgba(77, 172, 242, 0.15) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+        
+        .texture-grid {
+            position: relative;
+            background-image: 
+                linear-gradient(rgba(77, 172, 242, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(77, 172, 242, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        
+        .texture-waves {
+            position: relative;
+            background: linear-gradient(135deg, rgba(77, 172, 242, 0.05) 0%, transparent 100%);
+        }
+        
+        .texture-waves::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%234DACF2' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E") repeat-x;
+            background-size: 100px 20px;
+            animation: wave 10s linear infinite;
+            pointer-events: none;
+        }
+        
+        @keyframes wave {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100px); }
+        }
+        
+        .texture-medical {
+            position: relative;
+            background-color: #fafbfc;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(77, 172, 242, 0.03) 35px, rgba(77, 172, 242, 0.03) 70px),
+                repeating-linear-gradient(-45deg, transparent, transparent 35px, rgba(77, 172, 242, 0.02) 35px, rgba(77, 172, 242, 0.02) 70px);
+        }
+        
+        .texture-gradient-mesh {
+            position: relative;
+            background: 
+                radial-gradient(at 40% 20%, rgba(77, 172, 242, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, rgba(77, 172, 242, 0.1) 0px, transparent 50%),
+                radial-gradient(at 10% 50%, rgba(77, 172, 242, 0.08) 0px, transparent 50%),
+                radial-gradient(at 80% 100%, rgba(77, 172, 242, 0.05) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(77, 172, 242, 0.12) 0px, transparent 50%);
+        }
+        
+        .hero-pattern {
+            position: relative;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            overflow: hidden;
+        }
+        
+        .hero-pattern::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234DACF2' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(-20px, -20px) rotate(1deg); }
+            66% { transform: translate(20px, -10px) rotate(-1deg); }
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        .container {
+            max-width: var(--max-width-xl);
+            margin: 0 auto;
+            padding: var(--margin-mobile);
+            position: relative;
+            z-index: 1;
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                padding: var(--margin-tablet);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .container {
+                padding: var(--margin-desktop);
+            }
+        }
+        
+        @media (min-width: 1536px) {
+            .container {
+                padding: var(--margin-wide);
+            }
+        }
+        
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(77, 172, 242, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--space-4) 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+        
+        .logo-mark {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--blue-600) 100%);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: var(--font-bold);
+            font-size: var(--text-xl);
+            box-shadow: 0 4px 14px rgba(77, 172, 242, 0.3);
+        }
+        
+        .logo-text {
+            font-size: var(--text-2xl);
+            font-weight: var(--font-bold);
+            color: var(--primary-dark);
+        }
+        
+        .logo-text span {
+            color: var(--primary-blue);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-16);
+            border-radius: var(--radius-2xl);
+            padding: var(--space-16) var(--space-8);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            text-align: center;
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: var(--text-5xl);
+            font-weight: var(--font-bold);
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: var(--space-6);
+            line-height: var(--leading-tight);
+        }
+        
+        .hero-subtitle {
+            font-size: var(--text-xl);
+            color: var(--gray-600);
+            margin-bottom: var(--space-8);
+        }
+        
+        /* Section Headers */
+        .section {
+            margin: var(--space-16) 0;
+            position: relative;
+        }
+        
+        .section-header {
+            margin-bottom: var(--space-8);
+        }
+        
+        .section-title {
+            font-size: var(--text-3xl);
+            font-weight: var(--font-bold);
+            color: var(--primary-dark);
+            margin-bottom: var(--space-2);
+        }
+        
+        .section-subtitle {
+            font-size: var(--text-lg);
+            color: var(--gray-600);
+        }
+        
+        /* Textured Section Backgrounds */
+        .section-textured {
+            padding: var(--space-16) 0;
+            margin: 0 calc(var(--margin-mobile) * -1);
+            padding-left: var(--margin-mobile);
+            padding-right: var(--margin-mobile);
+        }
+        
+        @media (min-width: 768px) {
+            .section-textured {
+                margin: 0 calc(var(--margin-tablet) * -1);
+                padding-left: var(--margin-tablet);
+                padding-right: var(--margin-tablet);
+            }
+        }
+        
+        /* Color Grid */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--card-gap);
+            margin-bottom: var(--space-10);
+        }
+        
+        .color-card {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: var(--card-radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow-md);
+            transition: transform var(--transition-base), box-shadow var(--transition-base);
+            border: 1px solid rgba(77, 172, 242, 0.1);
+        }
+        
+        .color-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(77, 172, 242, 0.15);
+        }
+        
+        .color-sample {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: var(--font-semibold);
+            font-size: var(--text-lg);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .color-sample::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 100%);
+            pointer-events: none;
+        }
+        
+        .color-info {
+            padding: var(--space-4);
+            background: white;
+        }
+        
+        .color-name {
+            font-weight: var(--font-semibold);
+            color: var(--primary-dark);
+            margin-bottom: var(--space-1);
+        }
+        
+        .color-value {
+            font-family: 'Courier New', monospace;
+            font-size: var(--text-sm);
+            color: var(--gray-600);
+        }
+        
+        /* Typography Samples */
+        .typography-samples {
+            background: white;
+            border-radius: var(--card-radius);
+            padding: var(--card-padding);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: var(--space-10);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(77, 172, 242, 0.1);
+        }
+        
+        .typography-samples::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue) 0%, var(--blue-600) 100%);
+        }
+        
+        .type-sample {
+            margin-bottom: var(--space-6);
+            padding-bottom: var(--space-6);
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .type-sample:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .type-label {
+            font-size: var(--text-sm);
+            color: var(--gray-500);
+            margin-bottom: var(--space-2);
+            font-weight: var(--font-medium);
+        }
+        
+        /* Button Styles */
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-4);
+            margin-bottom: var(--space-10);
+        }
+        
+        .btn {
+            padding: var(--space-3) var(--space-6);
+            border-radius: var(--radius-md);
+            font-weight: var(--font-semibold);
+            font-size: var(--text-base);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--blue-600) 100%);
+            color: white;
+            box-shadow: 0 4px 14px rgba(77, 172, 242, 0.25);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(77, 172, 242, 0.35);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--gray-800) 100%);
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-blue);
+            border-color: var(--primary-blue);
+            position: relative;
+        }
+        
+        .btn-outline:hover {
+            background: var(--blue-50);
+            transform: translateY(-2px);
+        }
+        
+        .btn-ghost {
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            color: var(--gray-700);
+        }
+        
+        .btn-ghost:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: translateY(-2px);
+        }
+        
+        /* Card Examples */
+        .card-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--card-gap);
+            margin-bottom: var(--space-10);
+        }
+        
+        .card {
+            background: white;
+            border-radius: var(--card-radius);
+            padding: var(--card-padding);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(77, 172, 242, 0.1);
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--blue-600));
+            border-radius: var(--card-radius);
+            opacity: 0;
+            z-index: -1;
+            transition: opacity var(--transition-base);
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(77, 172, 242, 0.15);
+        }
+        
+        .card:hover::before {
+            opacity: 0.1;
+        }
+        
+        .card-header {
+            margin-bottom: var(--space-4);
+        }
+        
+        .card-title {
+            font-size: var(--text-xl);
+            font-weight: var(--font-semibold);
+            color: var(--primary-dark);
+            margin-bottom: var(--space-2);
+        }
+        
+        .card-subtitle {
+            font-size: var(--text-sm);
+            color: var(--gray-600);
+        }
+        
+        .card-content {
+            color: var(--gray-700);
+            line-height: var(--leading-relaxed);
+            margin-bottom: var(--space-4);
+        }
+        
+        .card-footer {
+            display: flex;
+            gap: var(--space-3);
+            padding-top: var(--space-4);
+            border-top: 1px solid var(--gray-200);
+        }
+        
+        /* Texture Showcase */
+        .texture-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--card-gap);
+            margin-bottom: var(--space-10);
+        }
+        
+        .texture-example {
+            height: 200px;
+            border-radius: var(--card-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: var(--font-semibold);
+            color: var(--primary-dark);
+            box-shadow: var(--card-shadow-md);
+            border: 1px solid rgba(77, 172, 242, 0.1);
+        }
+        
+        /* Spacing Examples */
+        .spacing-examples {
+            background: white;
+            border-radius: var(--card-radius);
+            padding: var(--card-padding);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid rgba(77, 172, 242, 0.1);
+        }
+        
+        .spacing-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: var(--space-4);
+        }
+        
+        .spacing-label {
+            font-size: var(--text-sm);
+            font-weight: var(--font-medium);
+            color: var(--gray-600);
+            width: 100px;
+        }
+        
+        .spacing-visual {
+            flex: 1;
+            height: 40px;
+            background: linear-gradient(135deg, var(--blue-100), var(--blue-200));
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            padding-left: var(--space-4);
+            box-shadow: inset 0 2px 4px rgba(77, 172, 242, 0.1);
+        }
+        
+        .spacing-value {
+            font-size: var(--text-xs);
+            color: var(--gray-500);
+            margin-left: var(--space-4);
+        }
+        
+        /* Form Elements */
+        .form-examples {
+            background: white;
+            border-radius: var(--card-radius);
+            padding: var(--card-padding);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: var(--space-10);
+            border: 1px solid rgba(77, 172, 242, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: var(--space-5);
+        }
+        
+        .form-label {
+            display: block;
+            font-size: var(--text-sm);
+            font-weight: var(--font-medium);
+            color: var(--gray-700);
+            margin-bottom: var(--space-2);
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: var(--space-3) var(--space-4);
+            border: 2px solid var(--gray-300);
+            border-radius: var(--radius-md);
+            font-size: var(--text-base);
+            font-family: 'Poppins', sans-serif;
+            transition: all var(--transition-base);
+            background: white;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(77, 172, 242, 0.1);
+            background: var(--blue-50);
+        }
+        
+        .form-helper {
+            font-size: var(--text-sm);
+            color: var(--gray-500);
+            margin-top: var(--space-2);
+        }
+        
+        /* Grid Layout Example */
+        .grid-example {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: var(--card-gap);
+            margin-bottom: var(--space-10);
+        }
+        
+        .grid-item {
+            background: linear-gradient(135deg, var(--blue-100), var(--blue-200));
+            padding: var(--space-6);
+            border-radius: var(--radius-md);
+            text-align: center;
+            color: var(--blue-700);
+            font-weight: var(--font-semibold);
+            box-shadow: 0 2px 8px rgba(77, 172, 242, 0.15);
+            border: 1px solid rgba(77, 172, 242, 0.2);
+        }
+        
+        .col-12 { grid-column: span 12; }
+        .col-6 { grid-column: span 6; }
+        .col-4 { grid-column: span 4; }
+        .col-3 { grid-column: span 3; }
+        
+        @media (max-width: 768px) {
+            .col-6, .col-4, .col-3 {
+                grid-column: span 12;
+            }
+        }
+        
+        /* Medical Badge */
+        .medical-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: var(--space-2) var(--space-3);
+            background: linear-gradient(135deg, var(--blue-50), white);
+            color: var(--primary-blue);
+            border-radius: var(--radius-full);
+            font-size: var(--text-sm);
+            font-weight: var(--font-semibold);
+            border: 2px solid var(--primary-blue);
+            box-shadow: 0 2px 8px rgba(77, 172, 242, 0.2);
+        }
+        
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--gray-900) 100%);
+            color: white;
+            padding: var(--space-12) 0;
+            margin-top: var(--space-20);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        
+        .footer-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-text {
+            color: var(--gray-400);
+            font-size: var(--text-sm);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="/vistamdlogo - Edited.png" alt="Vista RX MD" style="height: 48px; width: auto;" />
+                </div>
+                <div class="medical-badge">Physician Verified Platform</div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section with Texture -->
+    <section class="hero-section hero-pattern">
+        <div class="hero-content">
+            <h1 class="hero-title">Style & Branding Guide</h1>
+            <p class="hero-subtitle">Premium medical platform design system with sophisticated textures and depth</p>
+            <div class="button-group" style="justify-content: center; margin-top: var(--space-8);">
+                <button class="btn btn-primary">View Components</button>
+                <button class="btn btn-outline">Download Guide</button>
+            </div>
+        </div>
+    </section>
+    
+    <main class="container">
+        <!-- Background Textures Section -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Background Textures & Patterns</h2>
+                <p class="section-subtitle">Subtle medical-themed textures for depth and sophistication</p>
+            </div>
+            
+            <div class="texture-showcase">
+                <div class="texture-example texture-dots glass-effect">
+                    <span>Dot Pattern</span>
+                </div>
+                <div class="texture-example texture-grid glass-effect">
+                    <span>Grid Pattern</span>
+                </div>
+                <div class="texture-example texture-waves glass-effect">
+                    <span>Wave Pattern</span>
+                </div>
+                <div class="texture-example texture-medical glass-effect">
+                    <span>Medical Cross</span>
+                </div>
+                <div class="texture-example texture-gradient-mesh glass-effect">
+                    <span>Gradient Mesh</span>
+                </div>
+                <div class="texture-example hero-pattern glass-effect">
+                    <span>Hero Pattern</span>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Brand Colors on Textured Background -->
+        <section class="section-textured texture-medical">
+            <div class="section-header">
+                <h2 class="section-title">Brand Colors</h2>
+                <p class="section-subtitle">Primary and extended color palette for Vista RX MD</p>
+            </div>
+            
+            <h3 style="font-size: var(--text-xl); font-weight: var(--font-semibold); margin-bottom: var(--space-4);">Primary Colors</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-sample" style="background: linear-gradient(135deg, var(--primary-blue), var(--blue-600));">Primary Blue</div>
+                    <div class="color-info">
+                        <div class="color-name">Vista Blue</div>
+                        <div class="color-value">#4DACF2</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-sample" style="background: linear-gradient(135deg, var(--primary-dark), var(--gray-900));">Primary Dark</div>
+                    <div class="color-info">
+                        <div class="color-name">Vista Black</div>
+                        <div class="color-value">#1A1A1A</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="font-size: var(--text-xl); font-weight: var(--font-semibold); margin: var(--space-8) 0 var(--space-4) 0;">Blue Scale</h3>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-sample" style="background: var(--blue-50); color: var(--primary-dark);">Blue 50</div>
+                    <div class="color-info">
+                        <div class="color-value">#EBF7FF</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-sample" style="background: var(--blue-200); color: var(--primary-dark);">Blue 200</div>
+                    <div class="color-info">
+                        <div class="color-value">#AFE0FE</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-sample" style="background: linear-gradient(135deg, var(--blue-500), var(--blue-600));">Blue 500</div>
+                    <div class="color-info">
+                        <div class="color-value">#4DACF2</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-sample" style="background: linear-gradient(135deg, var(--blue-700), var(--blue-800));">Blue 700</div>
+                    <div class="color-info">
+                        <div class="color-value">#1E7BBF</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Typography -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Typography</h2>
+                <p class="section-subtitle">Poppins font family with modular scale</p>
+            </div>
+            
+            <div class="typography-samples texture-waves">
+                <div class="type-sample">
+                    <div class="type-label">Display / 4xl / 50px</div>
+                    <div style="font-size: var(--text-4xl); font-weight: var(--font-bold); line-height: var(--leading-tight);">
+                        Transforming Medical Distribution
+                    </div>
+                </div>
+                
+                <div class="type-sample">
+                    <div class="type-label">Heading 1 / 3xl / 38px</div>
+                    <div style="font-size: var(--text-3xl); font-weight: var(--font-bold); line-height: var(--leading-tight);">
+                        Physician-Verified Platform
+                    </div>
+                </div>
+                
+                <div class="type-sample">
+                    <div class="type-label">Body / base / 16px</div>
+                    <div style="font-size: var(--text-base); font-weight: var(--font-normal); line-height: var(--leading-relaxed);">
+                        Our platform ensures full regulatory compliance while providing physicians with the tools they need to efficiently manage their pharmaceutical orders.
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Buttons with Glass Effect -->
+        <section class="section-textured texture-gradient-mesh">
+            <div class="section-header">
+                <h2 class="section-title">Interactive Elements</h2>
+                <p class="section-subtitle">Buttons with depth and modern effects</p>
+            </div>
+            
+            <div class="button-group">
+                <button class="btn btn-primary">Place Order</button>
+                <button class="btn btn-secondary">View Dashboard</button>
+                <button class="btn btn-outline">Learn More</button>
+                <button class="btn btn-ghost">Cancel</button>
+            </div>
+        </section>
+        
+        <!-- Cards -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Card Components</h2>
+                <p class="section-subtitle">Elevated cards with subtle shadows and borders</p>
+            </div>
+            
+            <div class="card-examples">
+                <div class="card texture-dots">
+                    <div class="card-header">
+                        <h3 class="card-title">Semaglutide</h3>
+                        <p class="card-subtitle">GLP-1 Receptor Agonist</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Premium pharmaceutical-grade semaglutide for weight management and glycemic control.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary">Order Now</button>
+                        <button class="btn btn-ghost">Details</button>
+                    </div>
+                </div>
+                
+                <div class="card texture-grid">
+                    <div class="card-header">
+                        <h3 class="card-title">Quick Reorder</h3>
+                        <p class="card-subtitle">Based on your history</p>
+                    </div>
+                    <div class="card-content">
+                        <p>Quickly reorder your most frequently purchased products with saved preferences.</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary">Reorder</button>
+                        <button class="btn btn-ghost">History</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo" style="justify-content: center; margin-bottom: var(--space-4);">
+                    <img src="/vistamdlogo - Edited.png" alt="Vista RX MD" style="height: 48px; width: auto;" />
+                </div>
+                <p class="footer-text">© 2025 Vista RX MD. Style & Branding Guide v2.0</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
