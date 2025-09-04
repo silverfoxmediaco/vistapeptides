@@ -1,0 +1,316 @@
+/* Vista RX MD - Background Textures & Glass Effects */
+
+/* Radial Gradient Dots Pattern */
+.texture-dots {
+  background-image: radial-gradient(circle at 1px 1px, rgba(77, 172, 242, 0.3) 1px, transparent 0);
+  background-size: 20px 20px;
+  background-color: rgba(77, 172, 242, 0.02);
+}
+
+.texture-dots-dense {
+  background-image: radial-gradient(circle at 1px 1px, rgba(77, 172, 242, 0.4) 1px, transparent 0);
+  background-size: 12px 12px;
+  background-color: rgba(77, 172, 242, 0.03);
+}
+
+.texture-dots-light {
+  background-image: radial-gradient(circle at 1px 1px, rgba(77, 172, 242, 0.15) 1px, transparent 0);
+  background-size: 24px 24px;
+  background-color: rgba(77, 172, 242, 0.01);
+}
+
+/* Medical Grid Lines Pattern */
+.texture-grid {
+  background-image: 
+    linear-gradient(rgba(77, 172, 242, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(77, 172, 242, 0.2) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-color: rgba(77, 172, 242, 0.02);
+}
+
+.texture-grid-fine {
+  background-image: 
+    linear-gradient(rgba(77, 172, 242, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(77, 172, 242, 0.15) 1px, transparent 1px);
+  background-size: 12px 12px;
+  background-color: rgba(77, 172, 242, 0.01);
+}
+
+.texture-grid-dark {
+  background-image: 
+    linear-gradient(rgba(26, 26, 26, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 26, 26, 0.3) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-color: rgba(26, 26, 26, 0.02);
+}
+
+/* Animated Wave Pattern */
+.texture-waves {
+  background: linear-gradient(135deg, #4DACF2 0%, #1675d4 100%);
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20c0-11.046-8.954-20-20-20v20h20z' fill='%23ffffff' opacity='0.1'/%3E%3C/svg%3E");
+  animation: wave-move 8s ease-in-out infinite;
+}
+
+@keyframes wave-move {
+  0%, 100% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+}
+
+.texture-waves-subtle {
+  background: rgba(77, 172, 242, 0.05);
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 30c0-16.569-13.431-30-30-30v30h30z' fill='%234DACF2' opacity='0.1'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+}
+
+/* Medical Diagonal Cross Pattern */
+.texture-medical {
+  background-color: rgba(77, 172, 242, 0.03);
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%234DACF2' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M20 0v40M0 20h40' stroke='%234DACF2' stroke-width='1' stroke-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 40px 40px;
+}
+
+.texture-medical-dense {
+  background-color: rgba(77, 172, 242, 0.04);
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%234DACF2' fill-opacity='0.08' fill-rule='evenodd'%3E%3Cpath d='M10 0v20M0 10h20' stroke='%234DACF2' stroke-width='1' stroke-opacity='0.15'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 20px 20px;
+}
+
+.texture-medical-dark {
+  background-color: rgba(26, 26, 26, 0.03);
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%231A1A1A' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M20 0v40M0 20h40' stroke='%231A1A1A' stroke-width='1' stroke-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 40px 40px;
+}
+
+/* Gradient Mesh Pattern */
+.texture-gradient-mesh {
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(77, 172, 242, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.2) 0%, transparent 50%);
+  background-size: 200px 200px, 150px 150px, 100px 100px;
+  background-position: 0 0, 50px 50px, 100px 100px;
+  animation: mesh-move 12s ease-in-out infinite;
+}
+
+@keyframes mesh-move {
+  0%, 100% { 
+    background-position: 0 0, 50px 50px, 100px 100px; 
+  }
+  33% { 
+    background-position: 50px 50px, 100px 0, 0 100px; 
+  }
+  66% { 
+    background-position: 100px 100px, 0 50px, 50px 0; 
+  }
+}
+
+.texture-gradient-mesh-static {
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(77, 172, 242, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.15) 0%, transparent 50%);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Glass Morphism Effects */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.glass-effect-dark {
+  background: rgba(26, 26, 26, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-effect-primary {
+  background: rgba(77, 172, 242, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(77, 172, 242, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(77, 172, 242, 0.3);
+}
+
+.glass-effect-strong {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.4);
+}
+
+.glass-effect-subtle {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.2);
+}
+
+/* Texture Overlays */
+.texture-overlay-light {
+  position: relative;
+}
+
+.texture-overlay-light::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.texture-overlay-dark {
+  position: relative;
+}
+
+.texture-overlay-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 26, 26, 0.6);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.texture-overlay-gradient {
+  position: relative;
+}
+
+.texture-overlay-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, 
+    rgba(77, 172, 242, 0.1) 0%, 
+    rgba(26, 26, 26, 0.05) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Animated Texture Effects */
+.texture-pulse {
+  animation: texture-pulse 3s ease-in-out infinite;
+}
+
+@keyframes texture-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+.texture-float {
+  animation: texture-float 6s ease-in-out infinite;
+}
+
+@keyframes texture-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.texture-rotate {
+  animation: texture-rotate 20s linear infinite;
+}
+
+@keyframes texture-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Medical Theme Specific Textures */
+.texture-heartbeat {
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,10 L15,10 L20,2 L25,18 L30,10 L45,10 L50,2 L55,18 L60,10 L75,10 L80,2 L85,18 L90,10 L100,10' stroke='%234DACF2' stroke-width='1' fill='none' opacity='0.3'/%3E%3C/svg%3E");
+  background-size: 100px 20px;
+  background-repeat: repeat;
+  animation: heartbeat-move 4s linear infinite;
+}
+
+@keyframes heartbeat-move {
+  from { background-position-x: 0; }
+  to { background-position-x: 100px; }
+}
+
+.texture-dna {
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='60' viewBox='0 0 30 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5,0 Q15,15 25,30 Q15,45 5,60 M25,0 Q15,15 5,30 Q15,45 25,60' stroke='%234DACF2' stroke-width='1' fill='none' opacity='0.2'/%3E%3C/svg%3E");
+  background-size: 30px 60px;
+  animation: dna-rotate 8s linear infinite;
+}
+
+@keyframes dna-rotate {
+  from { background-position-y: 0; }
+  to { background-position-y: 60px; }
+}
+
+/* Responsive Texture Adjustments */
+@media (max-width: 768px) {
+  .texture-gradient-mesh {
+    background-size: 150px 150px, 100px 100px, 75px 75px;
+    animation-duration: 8s;
+  }
+  
+  .texture-dots {
+    background-size: 16px 16px;
+  }
+  
+  .texture-grid {
+    background-size: 16px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-effect {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  
+  .texture-waves {
+    animation-duration: 6s;
+  }
+}
+
+/* High DPI / Retina Display Optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .texture-dots {
+    background-image: radial-gradient(circle at 0.5px 0.5px, rgba(77, 172, 242, 0.3) 0.5px, transparent 0);
+  }
+  
+  .texture-grid {
+    background-image: 
+      linear-gradient(rgba(77, 172, 242, 0.2) 0.5px, transparent 0.5px),
+      linear-gradient(90deg, rgba(77, 172, 242, 0.2) 0.5px, transparent 0.5px);
+  }
+}
+
+/* Print Styles - Remove textures for better print quality */
+@media print {
+  .texture-dots,
+  .texture-grid,
+  .texture-waves,
+  .texture-medical,
+  .texture-gradient-mesh,
+  .glass-effect,
+  .glass-effect-dark,
+  .glass-effect-primary {
+    background: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+}
