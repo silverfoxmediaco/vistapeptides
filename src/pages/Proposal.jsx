@@ -164,7 +164,7 @@ const Proposal = () => {
     <div className="proposal-page">
       <MainHeader />
       
-      <div className="proposal-container">
+      <div className="proposal-container" style={{ marginTop: '150px' }}>
         {/* Header Section */}
         <motion.header 
           className="proposal-header"

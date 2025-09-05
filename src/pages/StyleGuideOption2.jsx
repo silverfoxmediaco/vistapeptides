@@ -108,29 +108,6 @@ const StyleGuideOption2 = () => {
       {/* Header */}
       <header className="peptide-header" style={{ paddingTop: '150px' }}>
         <div className="container">
-          <div className="peptide-header-content">
-            <motion.div 
-              className="peptide-logo"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <img 
-                src="/vistapeptideslogov2croppedEdited.png" 
-                alt="Vista Peptides" 
-                className="peptide-logo-img"
-              />
-            </motion.div>
-            <motion.div 
-              className="peptide-badge"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <ShieldCheckIcon className="badge-icon" />
-              Physician Verified Platform
-            </motion.div>
-          </div>
         </div>
       </header>
 
