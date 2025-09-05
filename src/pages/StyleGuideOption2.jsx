@@ -11,6 +11,7 @@ import {
   ShieldCheckIcon,
   FlaskConicalIcon
 } from 'lucide-react';
+import MainHeader from '../components/MainHeader';
 import './StyleGuideOption2.css';
 
 const StyleGuideOption2 = () => {
@@ -103,8 +104,9 @@ const StyleGuideOption2 = () => {
 
   return (
     <div className="peptide-style-guide">
+      <MainHeader />
       {/* Header */}
-      <header className="peptide-header">
+      <header className="peptide-header" style={{ paddingTop: '80px' }}>
         <div className="container">
           <div className="peptide-header-content">
             <motion.div 

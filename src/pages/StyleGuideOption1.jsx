@@ -9,6 +9,7 @@ import {
   CheckIcon,
   DownloadIcon
 } from 'lucide-react';
+import MainHeader from '../components/MainHeader';
 import './StyleGuideOption1.css';
 
 const StyleGuide = () => {
@@ -103,8 +104,9 @@ const StyleGuide = () => {
 
   return (
     <div className="style-guide">
+      <MainHeader />
       {/* Hero Header */}
-      <section className="hero-section">
+      <section className="hero-section" style={{ paddingTop: '80px' }}>
         <div className="hero-background" />
         <div className="container">
           <motion.div 
