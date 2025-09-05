@@ -26,13 +26,9 @@ const MainHeader = () => {
 
   const navigation = [
     { name: 'Home', href: '/', id: 'nav-home' },
-    { name: 'Products', href: '/products', id: 'nav-products' },
     { name: 'Style Guide 1', href: '/style-guide-1', id: 'nav-style-guide-1' },
     { name: 'Style Guide 2', href: '/style-guide-2', id: 'nav-style-guide-2' },
-    { name: 'Proposal', href: '/proposal', id: 'nav-proposal' },
-    { name: 'Physicians', href: '/physicians', id: 'nav-physicians' },
-    { name: 'About', href: '/about', id: 'nav-about' },
-    { name: 'Contact', href: '/contact', id: 'nav-contact' }
+    { name: 'Proposal', href: '/proposal', id: 'nav-proposal' }
   ];
 
   const toggleMenu = () => {
