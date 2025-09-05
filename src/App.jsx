@@ -16,6 +16,7 @@ function App() {
           <Route path="/style-guide-1" element={<StyleGuideOption1 />} />
           <Route path="/style-guide-2" element={<StyleGuideOption2 />} />
           <Route path="/proposal" element={<Proposal />} />
+          <Route path="*" element={<StyleGuideOption1 />} />
         </Routes>
       </div>
     </Router>
