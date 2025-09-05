@@ -161,39 +161,31 @@ const MainHeader = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <motion.div 
+      <div 
         className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}
         id="mobile-menu-overlay"
-        initial={false}
-        animate={{ 
+        style={{
           opacity: isMenuOpen ? 1 : 0,
-          visibility: isMenuOpen ? 'visible' : 'hidden'
+          visibility: isMenuOpen ? 'visible' : 'hidden',
+          pointerEvents: isMenuOpen ? 'all' : 'none'
         }}
-        transition={{ duration: 0.3 }}
       >
-        <motion.div 
+        <div 
           className="mobile-menu-content"
-          initial={false}
-          animate={{ 
-            x: isMenuOpen ? 0 : '100%'
-          }}
-          transition={{ 
-            duration: 0.4,
-            ease: [0.23, 1, 0.32, 1]
+          id="mobile-menu-content"
+          style={{
+            transform: isMenuOpen ? 'translateX(0)' : 'translateX(100%)',
+            transition: 'transform 0.4s cubic-bezier(0.23, 1, 0.32, 1)'
           }}
         >
           <div className="mobile-nav-links">
             {navigation.map((item, index) => (
-              <motion.div
+              <div
                 key={item.name}
-                initial={false}
-                animate={{ 
+                style={{
                   opacity: isMenuOpen ? 1 : 0,
-                  x: isMenuOpen ? 0 : 50
-                }}
-                transition={{ 
-                  duration: 0.3,
-                  delay: isMenuOpen ? index * 0.1 : 0
+                  transform: isMenuOpen ? 'translateX(0)' : 'translateX(50px)',
+                  transition: `all 0.3s ease ${isMenuOpen ? index * 0.1 : 0}s`
                 }}
               >
                 <Link
@@ -204,7 +196,7 @@ const MainHeader = () => {
                 >
                   {item.name}
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
           
@@ -227,8 +219,8 @@ const MainHeader = () => {
               <span>support@vistarxmd.com</span>
             </div>
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       {/* Background Overlay */}
       {isMenuOpen && (
