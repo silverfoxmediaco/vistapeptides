@@ -49,11 +49,11 @@ const MainHeader = () => {
             <div className="contact-info">
               <div className="contact-item">
                 <PhoneIcon className="contact-icon" />
-                <span>(855) VISTA-RX</span>
+                <span>(855) VISTA-MD</span>
               </div>
               <div className="contact-item">
                 <MailIcon className="contact-icon" />
-                <span>support@vistarxmd.com</span>
+                <span>support@vistamd.com</span>
               </div>
             </div>
             <div className="top-bar-actions">
@@ -80,10 +80,7 @@ const MainHeader = () => {
                   className="logo-image"
                   id="main-logo-image"
                 />
-                <div className="logo-text">
-                  <span className="brand-name">Vista Peptides</span>
-                  <span className="brand-tagline">Medical Platform</span>
-                </div>
+                
               </a>
             </motion.div>
 

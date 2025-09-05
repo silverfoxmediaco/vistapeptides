@@ -106,7 +106,7 @@ const StyleGuideOption2 = () => {
     <div className="peptide-style-guide">
       <MainHeader />
       {/* Header */}
-      <header className="peptide-header" style={{ paddingTop: '80px' }}>
+      <header className="peptide-header" style={{ paddingTop: '150px' }}>
         <div className="container">
           <div className="peptide-header-content">
             <motion.div 

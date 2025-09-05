@@ -106,7 +106,7 @@ const StyleGuide = () => {
     <div className="style-guide">
       <MainHeader />
       {/* Hero Header */}
-      <section className="hero-section" style={{ paddingTop: '80px' }}>
+      <section className="hero-section" style={{ marginTop: '150px', paddingTop: '80px' }}>
         <div className="hero-background" />
         <div className="container">
           <motion.div 
