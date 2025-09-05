@@ -178,6 +178,14 @@ const MainHeader = () => {
             transition: 'transform 0.4s cubic-bezier(0.23, 1, 0.32, 1)'
           }}
         >
+          <button 
+            className="mobile-menu-close"
+            onClick={() => setIsMenuOpen(false)}
+            id="mobile-menu-close"
+          >
+            <XIcon className="menu-icon" />
+          </button>
+          
           <div className="mobile-nav-links">
             {navigation.map((item, index) => (
               <div

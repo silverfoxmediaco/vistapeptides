@@ -308,6 +308,22 @@
   z-index: 9999;
 }
 
+.mobile-menu-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: rgba(79, 183, 244, 0.08);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
 .mobile-nav-links {
   flex: 1;
   display: flex;
@@ -394,7 +410,7 @@
   width: 100vw;
   height: 100vh;
   background: rgb(255, 255, 255);
-  z-index: 9998;
+  
 }
 
 /* Responsive Design */
