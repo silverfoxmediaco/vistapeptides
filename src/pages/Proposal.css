@@ -105,6 +105,8 @@
   border-color: #4FB7F4;
   background: linear-gradient(to bottom, #ffffff, #f0f9ff);
   box-shadow: 0 12px 40px rgba(79, 183, 244, 0.2);
+  padding-top: 48px;
+  min-height: 620px;
 }
 
 .proposal-option-card.selected {
@@ -114,8 +116,9 @@
 
 .proposal-recommended-badge {
   position: absolute;
-  top: 8px;
-  right: 20px;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
   background: linear-gradient(135deg, #4FB7F4 0%, #3BA5E8 100%);
   color: white;
   padding: 8px 20px;
