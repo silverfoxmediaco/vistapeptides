@@ -295,7 +295,7 @@
   right: 0;
   width: 320px;
   height: 100%;
-  background: rgba(255, 255, 255, 0.98);
+  background: #ffffff;
   backdrop-filter: blur(25px);
   border-left: 1px solid rgba(77, 172, 242, 0.15);
   display: flex;
@@ -408,8 +408,7 @@
   }
   
   .top-bar {
-    font-size: 13px;
-    padding: 6px 0;
+    display: none;
   }
   
   .contact-info {
