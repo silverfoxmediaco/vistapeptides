@@ -42,7 +42,7 @@ const Proposal = () => {
       price: "$75,000",
       priceNote: "One-time payment",
       timeline: "3-4 Months",
-      timelineDetail: "December 2024 - January 2025",
+      timelineDetail: "December 2025 - January 2025",
       recommended: false,
       deliverables: [
         "Complete MERN stack platform",
@@ -60,7 +60,7 @@ const Proposal = () => {
       price: "$10,000",
       priceNote: "Plus $5,000/month ongoing",
       timeline: "3 Months",
-      timelineDetail: "December 2024 (MVP)",
+      timelineDetail: "December 2025 (MVP)",
       recommended: true,
       deliverables: [
         "MVP e-commerce platform",
@@ -89,13 +89,13 @@ const Proposal = () => {
     {
       option: "Option 2 - AI-Accelerated",
       start: "Upon contract signing",
-      launch: "December 2024 - January 2025",
+      launch: "December 2025 - January 2025",
       duration: "3-4 months"
     },
     {
       option: "Option 3 - Partnership",
       start: "Upon contract signing",
-      launch: "December 2024 (MVP)",
+      launch: "December 2025 (MVP)",
       duration: "3 months + ongoing"
     }
   ];
