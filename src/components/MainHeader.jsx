@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   MenuIcon, 
@@ -73,7 +74,7 @@ const MainHeader = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              <a href="/" className="logo-link" id="main-logo-link">
+              <Link to="/" className="logo-link" id="main-logo-link">
                 <img 
                   src="/vistapeptideslogov2croppedEdited.png" 
                   alt="Vista Peptides" 
@@ -81,18 +82,15 @@ const MainHeader = () => {
                   id="main-logo-image"
                 />
                 
-              </a>
+              </Link>
             </motion.div>
 
             {/* Desktop Navigation */}
             <nav className="desktop-nav">
               <div className="nav-links">
                 {navigation.map((item, index) => (
-                  <motion.a
+                  <motion.div
                     key={item.name}
-                    href={item.href}
-                    className="nav-link"
-                    id={item.id}
                     whileHover={{ y: -2 }}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -102,8 +100,14 @@ const MainHeader = () => {
                       ease: "easeOut"
                     }}
                   >
-                    {item.name}
-                  </motion.a>
+                    <Link
+                      to={item.href}
+                      className="nav-link"
+                      id={item.id}
+                    >
+                      {item.name}
+                    </Link>
+                  </motion.div>
                 ))}
               </div>
             </nav>
@@ -180,12 +184,8 @@ const MainHeader = () => {
         >
           <div className="mobile-nav-links">
             {navigation.map((item, index) => (
-              <motion.a
+              <motion.div
                 key={item.name}
-                href={item.href}
-                className="mobile-nav-link"
-                id={`mobile-${item.id}`}
-                onClick={() => setIsMenuOpen(false)}
                 initial={false}
                 animate={{ 
                   opacity: isMenuOpen ? 1 : 0,
@@ -196,8 +196,15 @@ const MainHeader = () => {
                   delay: isMenuOpen ? index * 0.1 : 0
                 }}
               >
-                {item.name}
-              </motion.a>
+                <Link
+                  to={item.href}
+                  className="mobile-nav-link"
+                  id={`mobile-${item.id}`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              </motion.div>
             ))}
           </div>
           
