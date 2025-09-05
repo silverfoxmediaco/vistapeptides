@@ -12,7 +12,7 @@ import {
 import MainHeader from '../components/MainHeader';
 import './StyleGuideOption1.css';
 
-const StyleGuide = () => {
+const StyleGuideOption1 = () => {
   const [copiedText, setCopiedText] = useState('');
 
   const copyToClipboard = (text, label) => {
@@ -421,4 +421,4 @@ const StyleGuide = () => {
   );
 };
 
-export default StyleGuide;
+export default StyleGuideOption1;
