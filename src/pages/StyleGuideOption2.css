@@ -1,0 +1,775 @@
+/* Vista Peptides Style Guide CSS */
+.peptide-style-guide {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--gray-50);
+  min-height: 100vh;
+  --primary-blue: #4FB7F4;
+  --primary-dark: #0A0A0A;
+  --text-dark: #1A1A1A;
+}
+
+/* Header */
+.peptide-header {
+  background: white;
+  padding: var(--space-4) 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 100;
+}
+
+.peptide-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.peptide-logo-img {
+  height: 48px;
+  width: auto;
+}
+
+.peptide-badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #3BA5E8 100%);
+  color: white;
+  padding: var(--space-2) var(--space-4);
+  border-radius: 50px;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+}
+
+.badge-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Hero Section */
+.peptide-hero {
+  position: relative;
+  background: linear-gradient(180deg, rgba(10,10,10,0.97) 0%, rgba(10,10,10,0.99) 100%);
+  color: white;
+  padding: var(--space-24) 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.peptide-hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(79,183,244,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>'),
+    radial-gradient(circle at 20% 80%, rgba(79,183,244,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(59,165,232,0.1) 0%, transparent 50%);
+  filter: contrast(1.1) brightness(0.9);
+}
+
+.peptide-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.peptide-hero-title {
+  font-size: var(--text-6xl);
+  font-weight: var(--font-black);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--space-6);
+  background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.8) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.peptide-hero-subtitle {
+  font-size: var(--text-xl);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--space-10);
+  line-height: var(--leading-relaxed);
+}
+
+.peptide-hero-actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Sections */
+.peptide-section {
+  padding: var(--space-24) 0;
+}
+
+.peptide-section-dark {
+  position: relative;
+  background: linear-gradient(180deg, rgba(10,10,10,0.97) 0%, rgba(10,10,10,0.99) 100%);
+  color: white;
+  overflow: hidden;
+}
+
+.peptide-section-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(79,183,244,0.08)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>'),
+    radial-gradient(circle at 30% 70%, rgba(79,183,244,0.05) 0%, transparent 50%);
+  filter: contrast(1.1);
+  pointer-events: none;
+}
+
+.peptide-section-light-texture {
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(79,183,244,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(59,165,232,0.06) 0%, transparent 50%),
+    var(--gray-50);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-8);
+}
+
+.peptide-section-header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.peptide-section-header-dark {
+  position: relative;
+  z-index: 1;
+}
+
+.peptide-section-title {
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  color: var(--text-dark);
+  margin-bottom: var(--space-4);
+}
+
+.peptide-section-title-dark {
+  color: white;
+}
+
+.peptide-section-subtitle {
+  font-size: var(--text-lg);
+  color: var(--gray-600);
+  line-height: var(--leading-relaxed);
+}
+
+.peptide-section-subtitle-dark {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* White Cards on Dark Sections */
+.peptide-card-white {
+  background: white;
+  padding: var(--space-10);
+  border-radius: var(--radius-2xl);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.peptide-subsection-title {
+  color: var(--primary-blue);
+  margin-bottom: var(--space-6);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+}
+
+/* Color Cards */
+.peptide-color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-6);
+}
+
+.peptide-color-card {
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+  border: 1px solid var(--gray-200);
+}
+
+.peptide-color-card:hover {
+  box-shadow: 0 10px 30px rgba(79, 183, 244, 0.15);
+}
+
+.peptide-color-swatch {
+  height: 100px;
+  width: 100%;
+}
+
+.peptide-color-info {
+  padding: var(--space-4);
+}
+
+.peptide-color-name {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.peptide-color-value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-3);
+  background: var(--gray-100);
+  border-radius: var(--radius-md);
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.peptide-color-value:hover {
+  background: var(--gray-200);
+}
+
+.copy-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--gray-500);
+  transition: all 0.2s ease;
+}
+
+.copy-icon.success {
+  color: var(--success);
+}
+
+/* Typography */
+.peptide-typography-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.peptide-typography-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-6);
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 4px 20px rgba(79, 183, 244, 0.08);
+}
+
+.peptide-typography-info {
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.peptide-typography-name {
+  font-weight: var(--font-semibold);
+  color: var(--primary-blue);
+}
+
+.peptide-typography-size {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+  font-family: 'Monaco', monospace;
+}
+
+.peptide-typography-example {
+  font-weight: var(--font-semibold);
+  color: var(--text-dark);
+  flex: 1;
+}
+
+/* Buttons */
+.peptide-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-base);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  border: 2px solid transparent;
+  text-decoration: none;
+}
+
+.peptide-btn-primary-dark {
+  background: var(--primary-blue);
+  color: white;
+  border-color: var(--primary-blue);
+}
+
+.peptide-btn-primary-dark:hover {
+  background: #3BA5E8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(79, 183, 244, 0.3);
+}
+
+.peptide-btn-secondary-light {
+  background: transparent;
+  color: white;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.peptide-btn-secondary-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.peptide-btn-primary {
+  background: var(--primary-blue);
+  color: white;
+}
+
+.peptide-btn-primary:hover {
+  background: #3BA5E8;
+  transform: translateY(-1px);
+}
+
+.peptide-btn-secondary {
+  background: var(--gray-100);
+  color: var(--gray-700);
+}
+
+.peptide-btn-secondary:hover {
+  background: var(--gray-200);
+}
+
+.peptide-btn-ghost {
+  background: transparent;
+  color: var(--gray-600);
+  border-color: var(--gray-300);
+}
+
+.peptide-btn-ghost:hover {
+  background: var(--gray-50);
+  color: var(--gray-700);
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Component Showcases */
+.peptide-component-group {
+  margin-bottom: var(--space-10);
+}
+
+.peptide-component-title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--text-dark);
+  margin-bottom: var(--space-6);
+}
+
+.peptide-button-showcase {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* Status Badges */
+.peptide-badge-showcase {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.peptide-status-badge {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.peptide-badge-success {
+  background: var(--success);
+  color: white;
+}
+
+.peptide-badge-warning {
+  background: var(--warning);
+  color: white;
+}
+
+.peptide-badge-info {
+  background: var(--primary-blue);
+  color: white;
+}
+
+.peptide-badge-error {
+  background: var(--error);
+  color: white;
+}
+
+.peptide-badge-new {
+  background: var(--primary-blue);
+  color: white;
+}
+
+.peptide-badge-research {
+  background: var(--warning);
+  color: white;
+}
+
+.peptide-badge-fda {
+  background: var(--success);
+  color: white;
+}
+
+/* Product Cards */
+.peptide-card-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--space-8);
+}
+
+.peptide-product-card {
+  background: white;
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+  border-top: 3px solid transparent;
+}
+
+.peptide-product-card:hover {
+  border-top-color: var(--primary-blue);
+  box-shadow: 0 20px 40px rgba(79, 183, 244, 0.15);
+}
+
+.peptide-product-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.peptide-product-name {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--text-dark);
+}
+
+.peptide-product-badge {
+  font-size: var(--text-xs);
+}
+
+.peptide-product-description {
+  color: var(--gray-600);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-6);
+}
+
+.peptide-product-dosage {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--primary-blue);
+}
+
+.peptide-dosage-label {
+  font-weight: var(--font-semibold);
+  color: var(--gray-700);
+}
+
+.peptide-dosage-value {
+  color: var(--text-dark);
+  font-family: 'Monaco', monospace;
+}
+
+/* Spacing System */
+.peptide-spacing-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.peptide-spacing-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-4);
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+}
+
+.peptide-spacing-info {
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.peptide-spacing-name {
+  font-weight: var(--font-semibold);
+  color: var(--text-dark);
+}
+
+.peptide-spacing-size {
+  font-size: var(--text-sm);
+  color: var(--gray-500);
+  font-family: 'Monaco', monospace;
+}
+
+.peptide-spacing-visual {
+  flex: 1;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.peptide-spacing-bar {
+  height: 8px;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #3BA5E8 100%);
+  border-radius: var(--radius-md);
+  min-width: 8px;
+}
+
+/* Guidelines */
+.peptide-guidelines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.peptide-guideline-card {
+  background: white;
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 4px 20px rgba(79, 183, 244, 0.08);
+  transition: all 0.3s ease;
+}
+
+.peptide-guideline-card:hover {
+  box-shadow: 0 10px 30px rgba(79, 183, 244, 0.15);
+}
+
+.peptide-guideline-title {
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--primary-blue);
+  margin-bottom: var(--space-4);
+}
+
+.peptide-guideline-description {
+  color: var(--gray-600);
+  line-height: var(--leading-relaxed);
+}
+
+/* Footer */
+.peptide-footer {
+  background: linear-gradient(180deg, rgba(10,10,10,0.97) 0%, rgba(10,10,10,0.99) 100%);
+  color: white;
+  padding: var(--space-12) 0;
+  text-align: center;
+  position: relative;
+}
+
+.peptide-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 25px 25px, rgba(79, 183, 244, 0.1) 2px, transparent 0),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><defs><pattern id="dots" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="rgba(79,183,244,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+.peptide-footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  position: relative;
+  z-index: 1;
+}
+
+.peptide-footer-logo-img {
+  height: 36px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.peptide-footer-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--text-sm);
+}
+
+/* CSS Variables */
+:root {
+  /* Vista Peptides Colors */
+  --primary-blue: #4FB7F4;
+  --primary-dark: #0A0A0A;
+  --text-dark: #1A1A1A;
+  
+  /* Extended Blue Palette */
+  --blue-50: #E6F5FF;
+  --blue-100: #CCE9FF;
+  --blue-200: #99D4FF;
+  --blue-300: #66BFFF;
+  --blue-400: #4FB7F4;
+  --blue-500: #3BA5E8;
+  --blue-600: #2B8FD3;
+  --blue-700: #1F6FA8;
+  --blue-800: #15507D;
+  --blue-900: #0B3052;
+  
+  /* Gray Scale */
+  --gray-50: #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-300: #D1D5DB;
+  --gray-400: #9CA3AF;
+  --gray-500: #6B7280;
+  --gray-600: #4B5563;
+  --gray-700: #374151;
+  --gray-800: #1F2937;
+  --gray-900: #111827;
+  
+  /* Semantic Colors */
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  --info: var(--primary-blue);
+  
+  /* Typography Scale */
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.333rem;    /* 21px */
+  --text-2xl: 1.777rem;   /* 28px */
+  --text-3xl: 2.369rem;   /* 38px */
+  --text-4xl: 3.157rem;   /* 50px */
+  --text-5xl: 4.209rem;   /* 67px */
+  --text-6xl: 5.61rem;    /* 90px */
+  
+  /* Line Heights */
+  --leading-tight: 1.1;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 1.75;
+  
+  /* Font Weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+  
+  /* Spacing Scale */
+  --space-0: 0;
+  --space-1: 0.25rem;    /* 4px */
+  --space-2: 0.5rem;     /* 8px */
+  --space-3: 0.75rem;    /* 12px */
+  --space-4: 1rem;       /* 16px */
+  --space-5: 1.25rem;    /* 20px */
+  --space-6: 1.5rem;     /* 24px */
+  --space-8: 2rem;       /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+  --space-20: 5rem;      /* 80px */
+  --space-24: 6rem;      /* 96px */
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--space-4);
+  }
+  
+  .peptide-hero-title {
+    font-size: var(--text-4xl);
+  }
+  
+  .peptide-hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .peptide-header-content {
+    flex-direction: column;
+    gap: var(--space-4);
+    text-align: center;
+  }
+  
+  .peptide-color-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .peptide-typography-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-4);
+  }
+  
+  .peptide-card-showcase {
+    grid-template-columns: 1fr;
+  }
+  
+  .peptide-button-showcase {
+    flex-direction: column;
+  }
+  
+  .peptide-badge-showcase {
+    justify-content: center;
+  }
+  
+  .peptide-guidelines-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .peptide-section {
+    padding: var(--space-16) 0;
+  }
+  
+  .peptide-card-white {
+    padding: var(--space-6);
+  }
+  
+  .peptide-product-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+}
