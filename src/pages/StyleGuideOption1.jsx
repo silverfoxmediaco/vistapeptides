@@ -153,7 +153,7 @@ const StyleGuide = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <img 
-              src="/vistamdlogo - Edited.png" 
+              src="/vistamdlogoEdited.png" 
               alt="Vista RX MD" 
               className="logo-showcase"
             />
@@ -406,7 +406,7 @@ const StyleGuide = () => {
           <div className="footer-content">
             <div className="footer-logo">
               <img 
-                src="/vistamdlogo - Edited.png" 
+                src="/vistamdlogoEdited.png" 
                 alt="Vista RX MD" 
                 className="footer-logo-img"
               />
